@@ -1,0 +1,944 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Monthly Calendar</title>
+    <meta name="description" content="Monthly view calendar for January.">
+    <meta name="author" content="Valerie Lamm">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<!--
+
+Monthly Calendar
+
+-->
+
+    
+    <!-- Raw monthly data
+_______________________________________________________________
+    -->
+<body>
+    <div id="theHtmlYear" class="hidden">2022</div>
+    <div class="hidden">
+        <!-- jan-->
+        <div id="theMonth1"> 
+            1
+            Javascript uses date and year to figure out day of the week. It uses line breaks to seperate data. <br>Lorem ipsum dolor
+            2.... this can be whatever style, every other line is skipped when parsed
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum
+            31
+            lorem
+        </div>
+        <!-- feb-->
+        <div id="theMonth2"> 
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+        </div>
+        <!-- mar-->
+        <div id="theMonth3">
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum
+            31
+            lorem
+        </div>
+        <!-- apr-->
+        <div id="theMonth4"> 
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum
+        </div>
+        <!-- may-->
+        <div id="theMonth5"> 
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum
+            31
+            lorem
+        </div>
+        <!-- jun-->
+        <div id="theMonth6"> 
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum
+        </div>
+        <!-- jul-->
+        <div id="theMonth7"> 
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum
+            31
+            lorem
+        </div>
+        <!-- aug-->
+        <div id="theMonth8"> 
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum
+            31
+            lorem
+        </div>
+        <!-- sep-->
+        <div id="theMonth9">
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum            
+        </div>
+        <!-- oct-->
+        <div id="theMonth10"> 
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+        </div>
+        <!-- nov-->
+        <div id="theMonth11"> 
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum
+        </div>
+        <!-- dec-->
+        <div id="theMonth12"> 
+            1
+            Lorem ipsum dolor
+            2
+            sit amet, consectetur 
+            3
+            adipiscing elit,
+            4
+            sed 
+            5
+            do eiusmod 
+            6
+            tempor incididunt 
+            7
+            ut labore et dolore 
+            8
+            magna aliqua. 
+            9
+            Ut enim ad minim veniam, 
+            10
+            quis nostrud 
+            11
+            exercitation ullamco 
+            12
+            laboris nisi ut 
+            13
+            aliquip ex ea 
+            14
+            commodo consequat. 
+            15
+            Duis aute irure 
+            16
+            dolor in reprehenderit 
+            17
+            in voluptate velit 
+            18
+            esse cillum dolore 
+            19
+            eu fugiat nulla pariatur. 
+            20
+            Excepteur 
+            21
+            sint occaecat 
+            22
+            cupidatat non proident,
+            23
+            sunt in culpa 
+            24
+            qui officia 
+            25
+            deserunt 
+            26
+            mollit 
+            27
+            anim 
+            28
+            id 
+            29
+            est 
+            30
+            laborum
+            31
+            lorem
+        </div>
+    </div>
+    
+    <!-- Raw monthly data end
+_______________________________________________________________
+    -->
+
+    <!--January-->
+    <section class="calendar-bg" style="background-image: url(imgs/jan.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>January 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth1" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--Feb-->
+    <section class="calendar-bg" style="background-image: url(imgs/feb.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>February 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth2" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--March-->
+    <section class="calendar-bg" style="background-image: url(imgs/mar.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>March 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth3" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--April-->
+    <section class="calendar-bg" style="background-image: url(imgs/apr.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>April 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth4" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--May -->
+    <section class="calendar-bg" style="background-image: url(imgs/may.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>May 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth5" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--June-->
+    <section class="calendar-bg" style="background-image: url(imgs/jun.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>June 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth6" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--July-->
+    <section class="calendar-bg" style="background-image: url(imgs/jul.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>July 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth7" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--August-->
+    <section class="calendar-bg" style="background-image: url(imgs/aug.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>August 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth8" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--September-->
+    <section class="calendar-bg" style="background-image: url(imgs/sep.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>September 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth9" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--October-->
+    <section class="calendar-bg" style="background-image: url(imgs/oct.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>October 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth10" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--November-->
+    <section class="calendar-bg" style="background-image: url(imgs/nov.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>November 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth11" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!--December-->
+    <section class="calendar-bg" style="background-image: url(imgs/dec.jpg)">
+        <div class="calendar-square start-wednesday" spellcheck="false">
+            <h1>December 2022</h1>
+            <div class="days-container">
+                <ul class="day-row"></ul> <!-- days inserted in js -->
+                <div id="organizedMonth12" class="flex-week"> <!-- div that gets data from js -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+<footer>
+    <script src="../parseData2.js"></script>
+</footer>
