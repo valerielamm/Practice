@@ -1,0 +1,266 @@
+/* --------------------------------------------------------
+Style Sheet for Rock Paper Scissors
+Version: 1
+Last Modified: 05.17.2019
+Author: Valerie Lamm
+----------------------------------------------------------*/
+
+
+
+/* -----------------------------------------------------------
+CONTENTS:
+=Resets & General
+=Wrapper
+=Main Content
+=Line
+=Svgs
+------------------------------------------------------------*/
+
+/* -----------------------------------------------------------
+=Resets & General
+------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img {
+	max-width: 100%; /*makes images scale with flexible grids*/
+	display: block; /*removes tiny space added in some browsers below images */
+}
+
+html {
+    font-size: 16px;
+	line-height: 1.5em;
+    font-family: 'PT Serif', serif;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+/* -----------------------------------------------------------
+=Wrapper
+------------------------------------------------------------*/
+body{
+    background: white;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+}
+
+/* -----------------------------------------------------------
+=Main Content
+------------------------------------------------------------*/
+
+h1{
+    font-family: 'PT Serif', serif;
+    font-size: 5em;
+    line-height: 1em;
+    color:#424242;
+    margin-bottom: .5em;
+}
+p{
+    font-family: 'PT Sans', sans-serif;
+    line-height: 2em;
+}
+.italic{
+    font-style: italic;
+}
+
+.prompt{
+    margin: 20vh 0 0 50%;
+    position: absolute;
+    
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+button:focus {
+    outline: 0px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+
+
+
+/* -----------------------------------------------------------
+=Line
+------------------------------------------------------------*/
+
+.curved-line { 
+    height:110vh;
+    position:fixed; 
+    width: 30%;
+    overflow:hidden; /*container that holds curve*/
+    pointer-events: none;
+}
+.curved-line::before {
+    height:133%;
+    width:133%; /*rounded square with right side cut off*/
+    border-radius:50%;
+    border:solid 7px #424242;
+    display:block;
+    position:absolute;
+    box-shadow: 0px 0px 0px 50px white ; /*hides the tag lines to the left of the curve*/
+    top:-15%;
+    left:50%;
+    content:"";
+}
+
+
+/* -----------------------------------------------------------
+=Svgs
+------------------------------------------------------------*/
+
+.result-color{fill:#912323;}
+.tags{fill:#EAEAEA;}
+.icons{fill:#424242;}
+
+.rock{
+    position:fixed;
+    width:13em;
+    margin: 20vh 0 0 18%;
+}
+.rock-svg{
+    width:100%;
+    position: absolute;
+    overflow: visible;
+}
+.rock-string{
+    width: 30%;
+    margin: 29% 0 0 -10%;
+    position: absolute;
+    height:8px;
+    background: #424242; 
+    border-radius: 5px 5px 5px 5px;
+}
+.paper{
+    position:fixed;
+    width:13em;
+    margin: 40vh 0 0 18%;
+}
+.paper-svg{
+    width:100%;
+    position: absolute;
+    overflow: visible;
+}
+.paper-string{
+    width: 35%;
+    margin: 29% 0 0 -20%;
+    position: absolute;
+    height:8px;
+    background: #424242; 
+    border-radius: 5px 5px 5px 5px;
+}
+.scissors{
+    position:fixed;
+    width:13em;
+    margin: 60vh 0 0 18%;
+}
+.scissors-svg{
+    width:100%;
+    position: absolute;
+    overflow: visible;
+}
+.scissors-string{
+    width: 35%;
+    margin: 29% 0 0 -18%;
+    position: absolute;
+    height:8px;
+    background: #424242; 
+    border-radius: 5px 5px 5px 5px;
+}
+#resultPaper, #resultScissors, #resultRock {
+    transition: all .5s ease;
+}
+.results {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: blue;
+}
+
+@media(orientation:portrait) and (max-height:1000px){
+    h1{
+        font-size: 2em;
+    }
+    .prompt{
+        margin: 3em 0 0 40%;
+        position: absolute;
+    }
+    .scissors{
+        width: 11em;
+        margin: 75vh 0 0 18%;
+    }
+    .paper{
+        width: 11em;
+        margin: 55vh 0 0 18%;
+    }
+    .rock{
+        width: 11em;
+        margin: 35vh 0 0 18%;
+    }
+}
+

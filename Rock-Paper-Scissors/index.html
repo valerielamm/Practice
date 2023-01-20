@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rock Paper Scissors</title>
+    <meta name="keywords" content="HTML,CSS, JavaScript">
+    <meta name="author" content="Valerie Lamm">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif:700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        
+        
+        <div class="rock" onmouseover="chbg('darker', 'rock')" onmouseout="chbg('original', 'rock')" onclick="rps('rock')">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 186 113" style="enable-background:new 0 0 186 113;" xml:space="preserve" class="rock-svg">
+            <rect x="74" class="result-color" id="resultRock" width="107" height="113"/>
+            <polygon class="tags" id="rock" points="186,113 47,113 0,59.4462 47,0 186,0 "/>
+            <circle class="icons" cx="31.5" cy="58.5" r="9.5"/>
+            <path class="icons" d="M128.5,99.5c-23.71045,0-43-19.29004-43-43s19.28955-43,43-43c23.70996,0,43,19.29004,43,43
+                S152.20996,99.5,128.5,99.5z M128.5,20.5c-19.85059,0-36,16.14941-36,36s16.14941,36,36,36s36-16.14941,36-36
+                S148.35059,20.5,128.5,20.5z"/>
+            </svg>
+            <div class="rock-string"></div>
+        </div>
+        <div class="paper" onmouseover="chbg('darker', 'paper')" onmouseout="chbg('original', 'paper')" onclick="rps('paper')">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 186 113" style="enable-background:new 0 0 186 113;" xml:space="preserve" class="paper-svg">
+            <rect x="74" class="result-color" id="resultPaper" width="107" height="113"/>
+            <polygon class="tags" id="paper" points="186,113 47,113 0,59.4462 47,0 186,0 "/>
+            <circle class="icons" cx="31.5" cy="58.5" r="9.5"/>
+            <path class="icons" d="M160.35254,100H95.64697c-1.93311,0-3.5-1.56738-3.5-3.5v-80c0-1.93262,1.56689-3.5,3.5-3.5h64.70557 c1.93262,0,3.5,1.56738,3.5,3.5v80C163.85254,98.43262,162.28516,100,160.35254,100z M99.14697,93h57.70557V20H99.14697V93z"/>
+            </svg>
+            <div class="paper-string"></div>
+            <div class="results"></div>
+        </div>
+        <div class="scissors" onmouseover="chbg('darker', 'scissors')" onmouseout="chbg('original', 'scissors')" onclick="rps('scissors')"s>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 186 113" style="enable-background:new 0 0 186 113;" xml:space="preserve" class="scissors-svg">
+            <rect x="74" class="result-color" id="resultScissors" width="107" height="113"/>
+            <polygon class="tags" id="scissors" points="186,113 47,113 0,59.4462 47,0 186,0 "/>
+            <circle class="icons" cx="31.5" cy="58.5" r="9.5"/>
+            <path class="icons" d="M170.02344,75.07129l-26.1521-18.52417l26.1521-18.52466c1.57715-1.11816,1.9502-3.30176,0.83301-4.87988 
+            c-1.11816-1.57715-3.30273-1.9502-4.87988-0.83301l-28.16132,19.94788l-18.81592-13.32776
+            c0.203-1.04553,0.31708-2.12256,0.31708-3.22656c0-9.32324-7.58496-16.9082-16.9082-16.9082S85.5,26.37988,85.5,35.70312
+            s7.58496,16.9082,16.9082,16.9082c5.67041,0,10.68573-2.81525,13.75476-7.11133l15.59625,11.04718l-15.33789,10.8645
+            c-3.04199-4.49561-8.18817-7.4566-14.01312-7.4566c-9.32324,0-16.9082,7.58496-16.9082,16.9082s7.58496,16.9082,16.9082,16.9082
+            s16.9082-7.58496,16.9082-16.9082c0-0.93835-0.09644-1.85272-0.24414-2.74994l18.74304-13.27649l28.16125,19.94733 c0.61426,0.43457,1.32129,0.64355,2.02051,0.64355c1.09668,0,2.17676-0.51367,2.85938-1.47656
+            C171.97363,78.37305,171.60059,76.18848,170.02344,75.07129z M102.4082,45.61133c-5.46338,0-9.9082-4.44434-9.9082-9.9082
+            s4.44482-9.9082,9.9082-9.9082c5.46387,0,9.9082,4.44434,9.9082,9.9082S107.87207,45.61133,102.4082,45.61133z M102.4082,86.77148
+            c-5.46338,0-9.9082-4.44434-9.9082-9.9082s4.44482-9.9082,9.9082-9.9082c5.46387,0,9.9082,4.44434,9.9082,9.9082
+            S107.87207,86.77148,102.4082,86.77148z"/>
+            </svg>
+            <div class="scissors-string"></div>
+        </div>
+        <div class="curved-line">
+        </div>
+        <div class="prompt">
+            <h1>Rock <br>Paper<br>Scissors</h1>
+            <p class="result" id="result">Can you beat the computer?</p>
+            <p class="italic" id="choices">Pick one.</p>
+        </div>
+        
+<!--
+            
+        <p>Type rock, paper, or scissors into the prompt. No capital letters.</p>
+        <button onclick="rps()">Play!</button>
+-->
+    
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="rps.js"></script>
