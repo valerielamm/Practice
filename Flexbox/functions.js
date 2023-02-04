@@ -130,20 +130,34 @@ function flexboxChange(styleChange) {
     }
 }
 
+// random text for the inside of the boxes
+
+var s = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+s = s.split(" "); // splits this into an array of words
+var text = '';
+
+
 // Used to randomize shades of grey on new divs
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-// Number count on divs
+// Number count of divs
 var divCount = 3;
 
 // Add another 'box' div to #container
 function moreDivs() {
+    text = " ";
     var div = document.createElement("div");
-    div.innerHTML = divCount + 1;
+    // grabs random words from var s for inner html
+    for (var i=0; i<5; i++) {
+        text += s[Math.floor(Math.random()*s.length)] + " ";
+    }
+    div.innerHTML = text;
     div.className = "box";
     div.style.background = "rgba(255, 255, 255, ." + getRandomInt(5) + ")";
+    div.style.flexBasis = "min-content";
+    div.style.width = "min-content";
     container.appendChild(div);
     divCount++;
 }
@@ -156,3 +170,4 @@ function lessDivs() {
         divCount--;
     };
 }
+
