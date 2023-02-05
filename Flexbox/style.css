@@ -99,6 +99,7 @@ body {
 
 button {
     font-size: 1em;
+    color: black;
 }
 
 .buttonContainer {
@@ -117,25 +118,30 @@ button {
     background: rgba(255, 255, 255, .2);
     box-shadow: 1em 1em rgba(0, 0, 0, .1);
     outline: 0;
+    color: black;
 }
 
 .buttonContainer button:hover {
     background: rgba(255, 255, 255, .1);
+    color: black;
 }
 
 .buttonContainer button:active {
     border: none;
     outline: 0;
     background: rgba(255, 255, 255, .05);
+    color: black;
 }
 
 .selected {
     background: #acacac !important;
     font-weight: 600;
+    color: black;
 }
 
 p{
     font-weight: normal;
+    color: black;
     margin-top: -1em;
     margin-bottom: 1.245em;
     font-style: italic;
