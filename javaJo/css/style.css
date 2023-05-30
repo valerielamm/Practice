@@ -22,6 +22,8 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-decoration: none; /* added for links */
+	color: #000000; /* added for links */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -45,4 +47,224 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+/* 	Java Jos CSS 
+	Written by yours truly: Valerie 
+	Starting with the main components:
+*/
+
+body {
+	background-color: #fff;
+	width: 100%;
+	display: block;
+	color: #2D2A32;
+	font-family: 'Roboto', sans-serif;
+	font-size: 12px; /* base font size for 1em */
+}
+
+hr {
+	height: 2px;
+	background-color: #2D2A32;
+	margin: 0;
+	border: none;
+	font-size: 1em;
+}
+
+header {
+	background-color: #fff;
+	display: block;
+	width: 100%;
+	z-index: 99;
+	position: fixed;
+}
+
+.header-top-bar {
+	width: 100%;
+	background-color: #2D2A32;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-top-bar p {
+	color: #fff;
+	font-size: 1em;
+}
+
+.header-main-bar {
+	height: 60px;
+}
+
+.logo {
+	height: 38px;
+	float: left;
+	margin-left: 15px;
+	margin-top: 11px;
+}
+
+.header-nav {
+	display: flex;
+	float: right;
+	margin-right: 30px;
+	margin-top: 19px;
+	align-items: center;
+}
+
+.header-nav li {
+	margin-left:60px;
+	font-size: 1.5em;
+}
+
+.header-nav li a {
+	display: flex;
+	align-items: center;
+}
+
+.header-nav li a img {
+	margin-right: 10px;
+}
+
+main {
+	padding-top: 90px;
+}
+
+.splash-img {
+	background-image: linear-gradient(to bottom, rgb(245, 246, 252), rgba(255, 255, 255, 0.53)),url("../imgs/home-splash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.splash-img img {
+	width: 30%;
+	padding-bottom: 210px;
+	margin-top: -45px;
+}
+
+.wrapper {
+	max-width: 1800px;
+}
+
+.brown-background {
+	background-color: #2D2A32;
+	overflow: visible;
+}
+
+.brown-background:after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+
+.upcoming-box {
+	background-color: rgba(255, 255, 255, 0.36);
+	width: 330px;
+	float: right;
+	margin-top: -30px;
+	padding-bottom: 15px;
+	margin-right: 13.5%;
+	margin-bottom: 60px;
+}
+
+.upcoming-box h1 {
+	background-color: #fff;
+	margin: 15px 15px 0 15px;
+	padding: 15px 15px 0 15px;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #2D2A32;
+}
+
+.upcoming-box p {
+	background-color: #fff;
+	margin: 0 15px 0 15px;
+	padding: 0 15px 0 15px;
+	font-size: 1.3em;
+	color: rgb(45, 42, 50);
+}
+
+.upcoming-box p small {
+	padding-top: 15px;
+	color: rgba(45, 42, 50, .5);
+	margin-bottom: 15px;
+	display: inline-block;
+}
+
+.footer-wrapper {
+	margin: 90px;
+	display: flex;
+    justify-content: space-between;
+}
+
+.social-icon:nth-child(2){
+	margin-left: 10px;
+}
+
+.footer-subscription-section form {
+    background: #2D2A32;
+}
+
+.footer-subscription-section form label {
+	width: 250px;
+	border: 1px solid #2D2A32;
+	padding: 15px;
+	display: inline-block;
+	background: white;
+}
+
+.footer-subscription-section form label input {
+	border: none;
+}
+
+.footer-subscription-section form label input::placeholder{
+	color: #2D2A32;
+}
+
+.footer-subscription-section form label input:focus-visible {
+	border: none;
+	outline: none;
+}
+
+.footer-subscription-section form button {
+	border: none;
+    background: #2D2A32;
+	color: white;
+    display: inline-block;
+	padding: 15px;
+}
+
+.footer-subscription-section p small{
+	color: rgba(45, 42, 50, .5);
+	margin-top: 15px;
+	display: block;
+}
+
+.footer-nav {
+	display: flex;
+	height: 30px;
+	flex-wrap: wrap;
+	align-content: center;
+	color: #2D2A32;
+    justify-content: space-between;
+}
+
+.footer-nav li {
+	margin-left: 20px;
+	color: #2D2A32;
+}
+
+.footer-nav li a{
+	color: #2D2A32;
+}
+
+.view-only-mobile{
+	display: none;
+}
+
+
+@media only screen and (max-device-width: 768px) {
+    .view-only-mobile {display:block;}
 }
