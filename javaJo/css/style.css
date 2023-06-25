@@ -77,6 +77,7 @@ header {
 	width: 100%;
 	z-index: 99;
 	position: fixed;
+	max-width: 1800px;
 }
 
 .header-top-bar {
@@ -107,23 +108,23 @@ header {
 .header-nav {
 	display: flex;
 	float: right;
-	margin-right: 30px;
-	margin-top: 19px;
 	align-items: center;
-}
-
-.header-nav li {
-	margin-left:60px;
-	font-size: 1.5em;
 }
 
 .header-nav li a {
 	display: flex;
-	align-items: center;
+	padding: 21px 30px 21px 30px;
+	border-left: rgba(0,0,0,0) solid 2px;
+	border-right: rgba(0,0,0,0) solid 2px;
 }
 
 .header-nav li a img {
 	margin-right: 10px;
+	width: 1.2em;
+}
+
+.header-nav li p {
+	font-size: 1.5em;
 }
 
 main {
@@ -139,13 +140,15 @@ main {
 }
 
 .splash-img img {
-	width: 30%;
+	width: 45%;
 	padding-bottom: 210px;
 	margin-top: -45px;
 }
 
 .wrapper {
 	max-width: 1800px;
+	margin: auto;
+	background: #413F46;
 }
 
 .brown-background {
@@ -193,8 +196,12 @@ main {
 	display: inline-block;
 }
 
+footer {
+	background: white;
+}
+
 .footer-wrapper {
-	margin: 90px;
+	padding: 90px;
 	display: flex;
     justify-content: space-between;
 }
@@ -205,11 +212,12 @@ main {
 
 .footer-subscription-section form {
     background: #2D2A32;
+	width: fit-content;
 }
 
 .footer-subscription-section form label {
 	width: 250px;
-	border: 1px solid #2D2A32;
+	border: 2px solid #2D2A32;
 	padding: 15px;
 	display: inline-block;
 	background: white;
@@ -256,15 +264,173 @@ main {
 	color: #2D2A32;
 }
 
-.footer-nav li a{
+.footer-nav li a {
 	color: #2D2A32;
 }
 
-.view-only-mobile{
+.view-only-mobile {
+	display: none;
+}
+
+.stopscroll {
+	overflow: hidden !important;
+}
+
+#hamburger, .hamburger-menu{
 	display: none;
 }
 
 
-@media only screen and (max-device-width: 768px) {
-    .view-only-mobile {display:block;}
+/* active state */
+.header-nav li a:hover,  .header-nav li a:active {
+	padding: 21px 30px 21px 30px;
+	border-left: black solid 2px;
+	border-right: black solid 2px;
+	background: #EAEAEB;
+}
+
+.footer-nav li:hover, .footer-nav li:active {
+	font-weight: 800;
+	margin-left: 19px;
+}
+
+
+
+/* this is where footer switches to mobile style */
+@media only screen and (max-width: 1100px) {
+    .footer-wrapper { 
+		display: block;
+	}
+
+	.footer-social-section {
+		float: right;
+	}
+
+	.footer-nav {
+		display: block;
+		line-height: 18px;
+		margin-top: 30px;
+	}
+
+	.footer-nav li {
+		margin-left: 0;
+	}
+
+	.splash-img img {
+		width:550px;
+	}
+}
+
+/* smaller screen 950 to 600 px */
+/* this is where header nav switches to hamburger */
+@media only screen and (max-width: 950px) {
+    .view-only-mobile {
+		display: block;
+	}
+
+	.header-nav li a {
+		padding: 0;
+		border: none;
+	}
+
+	.header-nav li a img {
+		width: 24px;
+	}
+
+	.hamburger-menu {
+		margin-right: 30px;
+		float: right;
+		display: block;
+		margin-top: 19px;
+	}
+
+	/* nav is affected by js so no hyphens in names */
+	.mobilenav {
+		transition: .5s;
+	}
+
+	.mobilenavmenu {
+		-webkit-transform: rotate(90deg);
+			-ms-transform: rotate(90deg);
+			transform: rotate(90deg);
+			transition: .5s;
+	}
+
+	.mobilenavlist{
+		display: block !important;
+		background: #2D2A32;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		margin-top:60px;
+		margin-bottom: -60px;
+	}
+
+	.mobilenavlist li {
+		border: solid #2D2A32 2px;
+		border-right: none;
+		border-bottom: none;
+		display: flex;
+    	justify-content: flex-end;
+	}
+
+	.mobilenavlist li a img {
+		background: white;
+		padding: 0 33px;
+		margin: 0 !important;
+	}
+
+	.mobilenavlist li a {
+		flex-direction: row-reverse;
+		height: 90px;
+		background: white;
+	}
+
+	.mobilenavlist li a p {
+		background: #2D2A32;
+		width: 100%;
+		height: inherit;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding-right: 30px;
+		color: white;
+	}
+
+	.splash-img img{
+		width: 550px;
+	}
+
+	/* active state */
+	.header-nav li a:hover,  .header-nav li a:active {
+		padding: 0;
+		border: none;
+		background: #EAEAEB;
+	}
+
+	.header-nav li a img:hover,  .header-nav li a img:active {
+		background: #EAEAEB;
+	}
+
+	.header-nav {
+		display: none;
+	}
+
+}
+
+
+/* smaller screen 600 px and below */
+@media only screen and (max-width: 600px) {
+	.splash-img img{
+		width: 105%;
+	}
+
+	.upcoming-box {
+		margin-right: 10%
+	}
+
+	.footer-subscription-section form label {
+		width: 150px;
+	}
+
 }

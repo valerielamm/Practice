@@ -23,28 +23,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
 
+    <script>
+    function toggleClass(idName,newClass) {
+        document.getElementById(idName).classList.toggle(newClass);
+        document.body.classList.toggle("stopscroll");
+    }
+</script>
+
 </head>
 
-<body>
+<body class="wrapper">
     <header>
         <div class="header-top-bar">
             <p>available for dine in or to-go</p>
         </div>
         <div class="header-main-bar">
-            <img class="logo" src="imgs/logo.svg" >
-            <img class="hamburger-menu view-only-mobile" src="imgs/hamburger-menu.svg">
-            <ul class="header-nav">
-                <li><a href="#"><img src="imgs/home-icon.svg">home</a></li>
-                <li><a href="our-story/index.html"><img src="imgs/our-story-icon.svg">our story</a></li>
-                <li><a href="location/index.html"><img src="imgs/location-icon.svg">location</a></li>
-                <li><a href="menu/index.html"><img src="imgs/menu-icon.svg">menu</a></li>
-                <li><a href="merchandise/index.html"><img src="imgs/merchandise-icon.svg">merchandise</a></li>
+            <a href="#">
+                <img class="logo" src="imgs/logo.svg" >
+            </a>
+            <label class="hamburger-menu mobilenav" id="togglenav" for="hamburger" onclick="toggleClass('togglenav','mobilenavmenu');toggleClass('togglenavlist','mobilenavlist')">
+                <img src="imgs/hamburger-menu.svg">
+            </label>
+            <input type="checkbox" id="hamburger" />
+            <ul class="header-nav" id="togglenavlist">
+                <li><a href="#"><img src="imgs/home-icon.svg"><p>home</p></a></li>
+                <li><a href="our-story/index.html"><img src="imgs/our-story-icon.svg"><p>our story</p><hr></a></li>
+                <li><a href="location/index.html"><img src="imgs/location-icon.svg"><p>location</p></a></li>
+                <li><a href="menu/index.html"><img src="imgs/menu-icon.svg"><p>menu</p></a></li>
+                <li><a href="merchandise/index.html"><img src="imgs/merchandise-icon.svg"><p>merchandise</p></a></li>
             </ul>
         </div>
         <hr>
     </header>  
     <main>
-        <div class="wrapper">
+        <div>
             <div class="splash-img">
                 <img class="home-page-splash-logo" src="imgs/splash-logo.svg" alt="java jo logo">
             </div>
