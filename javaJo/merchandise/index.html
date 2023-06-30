@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Java Jo's Coffee - Merchandise</title>
+    <meta name="description" content="A Texas based coffee shop.">
+    <meta name="author" content="Java Jo">
+
+    <meta property="og:title" content="Java Jo's Coffee - Merchandise">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A Texas based coffee shop.">
+
+    <link rel="icon" href="../imgs/favicon.ico">
+    <link rel="icon" href="../imgs/favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="../css/style.css?v=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+
+    <script>
+    function toggleClass(idName,newClass) {
+        document.getElementById(idName).classList.toggle(newClass);
+        document.body.classList.toggle("stopscroll");
+    }
+</script>
+
+</head>
+
+<body class="wrapper">
+    <header>
+        <div class="header-top-bar">
+            <p>available for dine in or to-go</p>
+        </div>
+        <div class="header-main-bar">
+            <a href="../index.html">
+                <img class="logo" src="../imgs/logo.svg" >
+            </a>
+            <label class="hamburger-menu mobilenav" id="togglenav" for="hamburger" onclick="toggleClass('togglenav','mobilenavmenu');toggleClass('togglenavlist','mobilenavlist')">
+                <img src="../imgs/hamburger-menu.svg">
+            </label>
+            <input type="checkbox" id="hamburger" />
+            <ul class="header-nav" id="togglenavlist">
+                <li><a href="../index.html"><img src="../imgs/home-icon.svg"><p>home</p></a></li>
+                <li><a href="../our-story/index.html"><img src="../imgs/our-story-icon.svg"><p>our story</p><hr></a></li>
+                <li><a href="../location/index.html"><img src="../imgs/location-icon.svg"><p>location</p></a></li>
+                <li><a href="../menu/index.html"><img src="../imgs/menu-icon.svg"><p>menu</p></a></li>
+                <li><a href="#"><img src="../imgs/merchandise-icon.svg"><p>merchandise</p></a></li>
+            </ul>
+        </div>
+        <hr>
+    </header>  
+    <main class="bottom-line">
+        <div class="text-wrapper">
+            <h1>
+                in progress
+            </h1>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="footer-subscription-section">
+                <form>
+                    <label>
+                        <input type="text" placeholder="your.email.address@">
+                    </label>
+                    <button>subscribe</button>
+                </form>
+                <p><small>for secret coupons and exciting store updates</small></p>
+            </div>
+            <div class="footer-social-and-nav">
+                <div class="footer-social-section">
+                    <a class="social-icon" href="#"><img src="../imgs/instagram-icon.svg"></a>
+                    <a class="social-icon" href="#"><img src="../imgs/facebook-icon.svg"></a>
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="../our-story/index.html">our story</a></li>
+                    <li><a href="../location/index.html">location</a></li>
+                    <li><a href="../menu/index.html">menu</a></li>
+                    <li><a href="../merchandise/index.html">merchandise</a></li>
+                    <li><a href="../archive/index.html">notification archive</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+  <!-- <script src="js/scripts.js"></script> -->
+</body>
+</html>

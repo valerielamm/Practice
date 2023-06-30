@@ -54,6 +54,10 @@ table {
 	Starting with the main components:
 */
 
+html {
+	height: 100%;
+}
+
 body {
 	background-color: #fff;
 	width: 100%;
@@ -61,6 +65,7 @@ body {
 	color: #2D2A32;
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px; /* base font size for 1em */
+	height: 100%;
 }
 
 hr {
@@ -129,6 +134,11 @@ header {
 
 main {
 	padding-top: 90px;
+	background: white;
+}
+
+.bottom-line{
+	border-bottom: 2px black solid;
 }
 
 .splash-img {
@@ -145,10 +155,47 @@ main {
 	margin-top: -45px;
 }
 
+.hundred-percent-width {
+	width: 100%;
+}
+
+.menu {
+	width: 800px;
+	margin: 180px 0;
+}
+
+.text-align-center {
+	text-align: center;
+	text-align: -webkit-center;
+}
+
 .wrapper {
 	max-width: 1800px;
 	margin: auto;
 	background: #413F46;
+}
+
+.map-wrapper{
+	height: 100%;
+    display: inline-grid;
+}
+
+.text-wrapper {
+	margin-left: 210px;
+	max-width: 840px;
+	font-size: 1.3em;
+	margin-top: 150px;
+	padding-bottom: 170px;
+	text-align: left;
+}
+
+.text-wrapper h1{
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+
+.text-wrapper p {
+	margin-bottom: 60px;
 }
 
 .brown-background {
@@ -250,9 +297,15 @@ footer {
 	display: block;
 }
 
+.footer-social-and-nav {
+	display: flex;
+    flex-basis: 50%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
 .footer-nav {
 	display: flex;
-	height: 30px;
 	flex-wrap: wrap;
 	align-content: center;
 	color: #2D2A32;
@@ -262,6 +315,7 @@ footer {
 .footer-nav li {
 	margin-left: 20px;
 	color: #2D2A32;
+	width: fit-content;
 }
 
 .footer-nav li a {
@@ -280,6 +334,18 @@ footer {
 	display: none;
 }
 
+/* 
+ * GOOGLE MAPS
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+ #map {
+	height: 80%;
+	height: 550px;
+	width: 1200px;
+	margin-bottom: 130px;
+  }
+
 
 /* active state */
 .header-nav li a:hover,  .header-nav li a:active {
@@ -295,11 +361,12 @@ footer {
 }
 
 
-
+/* smaller screen 1150 to 950px */
 /* this is where footer switches to mobile style */
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1150px) {
     .footer-wrapper { 
-		display: block;
+		flex-wrap: nowrap;
+		flex-direction: column;
 	}
 
 	.footer-social-section {
@@ -309,7 +376,7 @@ footer {
 	.footer-nav {
 		display: block;
 		line-height: 18px;
-		margin-top: 30px;
+		margin-top: 0px;
 	}
 
 	.footer-nav li {
@@ -318,6 +385,28 @@ footer {
 
 	.splash-img img {
 		width:550px;
+	}
+
+	.text-wrapper {
+		margin-left: 90px;
+	}
+	
+	.footer-social-and-nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-direction: row-reverse;
+		margin-top: 45px;
+	}
+
+	.menu {
+		width: 80%;
+		margin: 80px 10%;
+	}
+
+	/* active state */
+	.footer-nav li:hover, .footer-nav li:active { 
+	 	margin-left: 0;
 	}
 }
 
@@ -427,6 +516,14 @@ footer {
 
 	.upcoming-box {
 		margin-right: 10%
+	}
+
+	.text-wrapper {
+		margin-left: 45px;
+	}
+
+	.footer-wrapper{
+		padding: 45px;
 	}
 
 	.footer-subscription-section form label {
