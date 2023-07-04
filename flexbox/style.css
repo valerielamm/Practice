@@ -37,7 +37,7 @@ h4 {
  * --------------------------------------- */
 
 body {
-    background: gray;
+    background: lightgray;
     font-family: helvetica, sans-serif;
     font-weight: bold;
 }
@@ -46,11 +46,7 @@ body {
     position: fixed;
     width: 100%;
     height: 15em;
-    background: repeating-linear-gradient(30deg,
-            black,
-            black 5px,
-            grey 5px,
-            grey 25px);
+    background: lightgrey;
     top: -5em;
 }
 
@@ -68,7 +64,7 @@ body {
     margin-left: 9%;
     display: flex;
     /* or inline-flex */
-    background: grey;
+    background: #acacac;
     height: 20em;
     justify-content: flex-start;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .1), 0px 0px 3px 2px rgba(0, 0, 0, .2);
@@ -83,18 +79,35 @@ body {
 
 .box {
     flex: inherit;
-    width: 2em;
+    font-size: 14px;
+    width: 5em;
     padding: 1em;
     background: rgba(255, 255, 255, .1);
 }
 
 .box:nth-child(1) {
     background: rgba(255, 255, 255, .3);
-    flex-grow: 2;
+    padding: .5em;
 }
 
 .box:nth-child(2) {
     background: rgba(255, 255, 255, .2);
+}
+
+.box:nth-child(3) {
+    background: rgba(255, 255, 255, .5);
+}
+
+.box:nth-child(4) {
+    background: rgba(255, 255, 255, .2);
+}
+
+.box:nth-child(5) {
+    background: rgba(255, 255, 255, .3);
+}
+
+.box:nth-child(6) {
+    background: rgba(255, 255, 255, .4);
 }
 
 button {
@@ -145,4 +158,11 @@ p{
     margin-top: -1em;
     margin-bottom: 1.245em;
     font-style: italic;
+}
+
+small {
+    margin-top: 5em;
+    display: block;
+    color: #b0b0b0;
+    font-weight: 500;
 }
